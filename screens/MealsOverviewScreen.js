@@ -11,7 +11,15 @@ function MealsOverviewScreen({ route }) {
     });
 
     function renderMealItem(itemData) {
-        return <MealItem title={itemData.item.title}/>
+        return (
+            <MealItem
+                title={itemData.item.title}
+                imageUrl={itemData.item.imageUrl}
+                duration={itemData.item.duration}
+                affordability={itemData.item.affordability}
+                complexity={itemData.item.complexity}
+            />
+        );
     }
 
     return (
